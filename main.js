@@ -15,15 +15,16 @@ window.onload = function() {
         [1, 5, 9]
     ];
 
+
     let playGame = function(e) {
 
-        // BASIC REQUIREMENT
+        // target check
         let cube = e.target;
         if (!cube.innerHTML && cube.tagName === 'LI') {
             let childs = cube.parentNode.children;
             let cubeIndex;
 
-            // GET CHILDREN
+            // GET Children
 
             for (let i = 0; i < childs.length; i++) {
                 if (cube == childs[i]) {
@@ -32,7 +33,7 @@ window.onload = function() {
                 }
             }
 
-            // CHANGE DOM and UPDATE GAMEOBJECT
+            // DOM change and UPDATE HTML Elements
 
             if (sign) {
                 cube.innerHTML = 'X';
@@ -44,7 +45,7 @@ window.onload = function() {
                 sign = true;
             }
 
-            if (count > 4) {
+            if (count > 4 && count < 9) {
 
                 // console.log(gameObject);
 
@@ -72,33 +73,40 @@ window.onload = function() {
                         }
                     }
                     if (xsignal === true) {
-                        console.log("xsignal won");
+                        console.log("X won");
                         pos.forEach(function(element) {
-                            document.querySelector('#page ul').children[element - 1].style.background = "green";
+                        document.querySelector('#page ul').children[element - 1].style.background = "#17CD6A";
                         })
-                        document.querySelector('#message').innerHTML = "X Won! Play Again?";
-                        document.querySelector('#message').style.background = "green";
+                        document.querySelector('#message').innerHTML = "X Won! Click to play again!";
+                        document.querySelector('#message').style.background = "#17CD6A";
                         document.querySelector('#message').style.opacity = "1";
                         gameObject = {};
                     } else if (osignal === true) {
-                        console.log("osignal won");
+                        console.log("O won");
                         pos.forEach(function(element) {
-                            document.querySelector('#page ul').children[element - 1].style.background = "red";
+                            document.querySelector('#page ul').children[element - 1].style.background = "#E8306B";
                         })
-                        document.querySelector('#message').innerHTML = "O Won! Play Again?";
-                        document.querySelector('#message').style.background = "red";
+                        document.querySelector('#message').innerHTML = "O Won! Click to play again!";
+                        document.querySelector('#message').style.background = "#E8306B";
                         document.querySelector('#message').style.opacity = "1";
                         gameObject = {};
                     }
-
                 })
 
+            } else if (count > 8){
+                document.querySelector('#message').innerHTML = "Draw! click to play again!"
+                document.querySelector('#message').style.background = "red";
+                document.querySelector('#message').style.opacity = "1";
+                gameObject = {};
+                
             }
         }
     }
     cube.addEventListener('click', playGame);
 
     let message = document.querySelector('#message');
+
+    //Reset 
     let playAgain = function() {
         this.style.opacity = "0";
         var a = document.querySelectorAll('li');
@@ -109,3 +117,5 @@ window.onload = function() {
     }
     message.addEventListener('click', playAgain)
 }
+
+
