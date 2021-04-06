@@ -1,0 +1,67 @@
+/* Styles go here */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+  }
+  #page {
+    margin: 30px auto;
+    background: rgba(255, 255, 255, .98);
+    background-color: #fff;
+    border: 1px solid rgba(100, 100, 100, .4);
+    -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+    height: 300px;
+    width: 40%;
+    border-radius: 10px;
+    border-color:#3b5998;
+    overflow: hidden;
+  }
+  #page ul {
+    list-style: none;
+    position: relative;
+    display: block;
+  }
+  #page ul li {
+    border: 1px solid rgba(140, 100, 100, .4);
+    border-right: none;
+    border-top: none;
+    float: left;
+    width: 32%;
+    height: 100px;
+    text-align: center;
+    line-height: 6;
+    padding-left: 5px;
+    
+  }
+  #message {
+    position: absolute;
+    bottom: 0;
+    -webkit-box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    left: 0;
+    right: 0;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s;
+  }
+  #title{
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    margin:0 auto;
+    color: #3b5998;
+    text-align:center;
+  }
+  /* @media (min-width: 550px) {
+   #page {
+     width: 50%;
+    }
+    #page ul li{
+      width:31%;
+    }
+  } */
