@@ -28,13 +28,12 @@
     margin: 50px auto;
     background: rgba(255, 255, 255, .98);
     background-color: #fff;
-    border: 1px solid rgba(100, 100, 100, .4);
-    -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+    border: 6px solid blue;
+    /* -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, .25); */
     height: 300px;
     width: 40%;
     border-radius: 10px;
-    border-color: blue;
     overflow: hidden;
   }
   #page ul {
@@ -52,7 +51,7 @@
     }
 
   #page ul li {
-    border: 2.7px solid rgba(72, 91, 196, 0.4);
+    border: 2px solid rgba(72, 91, 196, 0.4);
     border-right: none;
     border-top: none;
     float: left;
@@ -90,6 +89,8 @@
   }
 
 
+
+  /* Mobile Friendly */
   /* @media (min-width: 550px) {
    #page {
      width: 50%;
