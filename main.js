@@ -1,5 +1,4 @@
-// Code goes here
-
+//Execute JS immediately once page has been loaded
 window.onload = function() {
     let sign = true;
     let gameObject = {};
@@ -16,7 +15,6 @@ window.onload = function() {
         [1, 5, 9]
     ];
 
-
     let playGame = function(e) {
 
         // BASIC REQUIREMENT
@@ -27,7 +25,7 @@ window.onload = function() {
 
             // GET CHILDREN
 
-            for (var i = 0; i < childs.length; i++) {
+            for (let i = 0; i < childs.length; i++) {
                 if (cube == childs[i]) {
                     cubeIndex = i;
                     count++;
@@ -78,7 +76,7 @@ window.onload = function() {
                         pos.forEach(function(element) {
                             document.querySelector('#page ul').children[element - 1].style.background = "green";
                         })
-                        document.querySelector('#message').innerHTML = "X Player Won!!! Wanna Play Again Click";
+                        document.querySelector('#message').innerHTML = "X Won! Play Again?";
                         document.querySelector('#message').style.background = "green";
                         document.querySelector('#message').style.opacity = "1";
                         gameObject = {};
@@ -87,7 +85,7 @@ window.onload = function() {
                         pos.forEach(function(element) {
                             document.querySelector('#page ul').children[element - 1].style.background = "red";
                         })
-                        document.querySelector('#message').innerHTML = "O Player Won!!! Wanna Play Again Click";
+                        document.querySelector('#message').innerHTML = "O Won! Play Again?";
                         document.querySelector('#message').style.background = "red";
                         document.querySelector('#message').style.opacity = "1";
                         gameObject = {};
@@ -100,8 +98,8 @@ window.onload = function() {
     }
     cube.addEventListener('click', playGame);
 
-    var message = document.querySelector('#message');
-    var playAgain = function() {
+    let message = document.querySelector('#message');
+    let playAgain = function() {
         this.style.opacity = "0";
         var a = document.querySelectorAll('li');
         for (var i = 0; i < a.length; i++) {
