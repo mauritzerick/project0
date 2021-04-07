@@ -1,93 +1,111 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <script src="main.js"></script>
-  <script src="anime.min.js"></script>
-  <link rel="stylesheet" href="style.css">
-  
-</head>
+      <head>
+        <script src="main.js"></script>
+        <script src="anime.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+      </head>
 
-<body>
- <!-- <div id="title">Tic | Tac | Toe</div> -->
+      <body>
+     
+          <h1 class="movingText">
+              <span class="letters letters-1">Tic</span>
+              <span class="letters letters-2">Tac</span>
+              <span class="letters letters-3">Toe!</span>
+          </h1>
+          
 
- <h1 class="ml4">
-    <span class="letters letters-1">Tic</span>
-    <span class="letters letters-2">Tac</span>
-    <span class="letters letters-3">Toe!</span>
-  </h1>
-  
-  <div id="page">
-    <ul>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-    <div id='message' title="click to play again"></div>
-  </div>
+          <div class="players">X or O
+            <div class="chooseplayer x"></div>
+            <div class="chooseplayer o"></div>
+         </div>
 
+          <div class="page">
 
-  <!-- Script for Animation -->
-  <script>
-    var ml4 = {};
-    ml4.opacityIn = [0,1];
-    ml4.scaleIn = [0.2, 1];
-    ml4.scaleOut = 3;
-    ml4.durationIn = 8;
-    ml4.durationOut = 6;
-    ml4.delay = 500;
+           
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
 
-    anime.timeline({loop: true})
-    .add({
-        targets: '.ml4 .letters-1',
-        opacity: ml4.opacityIn,
-        scale: ml4.scaleIn,
-        duration: ml4.durationIn
-    }).add({
-        targets: '.ml4 .letters-1',
-        opacity: 0,
-        scale: ml4.scaleOut,
-        duration: ml4.durationOut,
-        easing: "easeInExpo",
-        delay: ml4.delay
-     }).add({
-        targets: '.ml4 .letters-2',
-        opacity: ml4.opacityIn,
-        scale: ml4.scaleIn,
-        duration: ml4.durationIn
-    }).add({
-        targets: '.ml4 .letters-2',
-        opacity: 0,
-        scale: ml4.scaleOut,
-        duration: ml4.durationOut,
-        easing: "easeInExpo",
-        delay: ml4.delay
-     }).add({
-        targets: '.ml4 .letters-3',
-        opacity: ml4.opacityIn,
-        scale: ml4.scaleIn,
-        duration: ml4.durationIn
-    }).add({
-        targets: '.ml4 .letters-3',
-        opacity: 0,
-        scale: ml4.scaleOut,
-        duration: ml4.durationOut,
-        easing: "easeInExpo",
-        delay: ml4.delay
-    }).add({
-        targets: '.ml4',
-        opacity: 0,
-        duration: 500,
-        delay: 500
-  });
-    </script>
+            
+
+            <div class='message' title="click to play again"></div>
+          </div>
+
+          <div class="score">
+            <div class="counts xScore">X Score</div>
+            <div class="Wins xCounter">0</div>
+            <div class="counts oScore">O Score</div>
+            <div class="Wins oCounter">0</div>
+          </div>
 
 
-</body>
+          <!-- Script for Animation -->
+          <script>
+            
+            var movingText = {};
+            movingText.opacityIn = [0,1];
+            movingText.scaleIn = [0.2, 1];
+            movingText.scaleOut = 3;
+            movingText.durationIn = 8;
+            movingText.durationOut = 6;
+            movingText.delay = 500;
+
+            anime.timeline({loop: true})
+            .add({
+                targets: '.movingText .letters-1',
+                opacity: movingText.opacityIn,
+                scale: movingText.scaleIn,
+                duration: movingText.durationIn
+            }).add({
+                targets: '.movingText .letters-1',
+                opacity: 0,
+                scale: movingText.scaleOut,
+                duration: movingText.durationOut,
+                easing: "easeInExpo",
+                delay: movingText.delay
+            }).add({
+                targets: '.movingText .letters-2',
+                opacity: movingText.opacityIn,
+                scale: movingText.scaleIn,
+                duration: movingText.durationIn
+            }).add({
+                targets: '.movingText .letters-2',
+                opacity: 0,
+                scale: movingText.scaleOut,
+                duration: movingText.durationOut,
+                easing: "easeInExpo",
+                delay: movingText.delay
+            }).add({
+                targets: '.movingText .letters-3',
+                opacity: movingText.opacityIn,
+                scale: movingText.scaleIn,
+                duration: movingText.durationIn
+            }).add({
+                targets: '.movingText .letters-3',
+                opacity: 0,
+                scale: movingText.scaleOut,
+                duration: movingText.durationOut,
+                easing: "easeInExpo",
+                delay: movingText.delay
+            }).add({
+                targets: '.movingText',
+                opacity: 0,
+                duration: 500,
+                delay: 500
+          }); 
+            </script>
+
+            
+
+      </body>
 </html>

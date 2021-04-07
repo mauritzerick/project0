@@ -5,8 +5,63 @@
     padding: 0;
   }
 
-  .ml4 {
-    font-family: 'Pacifico', cursive;
+
+/* 
+  .players{
+    position: fixed;
+    height: 200px;
+    width: 310px;
+    background-color: rgb(28, 137, 209);
+    margin-left: 65px;
+    margin-top: 50px;
+    line-height: 200px;
+    text-align: center;
+
+    top: 230px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 30px;
+  }
+
+  .chooseplayer{
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    left: 350px;
+    color: white;
+    background-color: rgb(190, 32, 32);
+    text-align: top;
+    top: 90px;
+    line-height:80px;
+    opacity: 0.65;
+  }
+  .x {
+    left: 88px;
+    top: 84px;
+    height:40px;
+    width: 40px;
+    border-radius: 10%;
+  }
+
+  .o:hover{
+    transition: all 2s;
+  }
+
+  .o {
+    left: 180px;
+    top: 84px;
+    height:40px;
+    width: 40px;
+    border-radius:10%
+  }
+
+  .hide {
+    display:none;
+  } */
+
+
+
+  .movingText {
+    font-family: 'Share Tech Mono', monospace;
     font-size: 50px;
     padding: 10px;
     border-radius: 5px;
@@ -15,7 +70,7 @@
     font-weight: 900;
     font-size: 4.5em;
   }
-  .ml4 .letters {
+  .movingText .letters {
     margin: auto;
     left: 0;
     top: 0.3em;
@@ -24,34 +79,41 @@
   }
 
 
-  #page {
-    margin: 50px auto;
+  .page {
+    /* position: absolute;
+    left:500px; */
+    margin: 100px auto;
     background: rgba(255, 255, 255, .98);
     background-color: #fff;
-    border: 6px solid blue;
+    border: 10px solid rgb(75, 75, 201);
     /* -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
     box-shadow: 0 3px 8px rgba(0, 0, 0, .25); */
     height: 300px;
     width: 22%;
-    border-radius: 20px;
+    border-radius: 40px;
     overflow: hidden;
   }
-  #page ul {
-    font-family: 'Pacifico', cursive;
+  
+  .page ul {
+    font-family: 'Share Tech Mono', monospace;
+    font-size:larger;
     list-style: none;
     position: relative;
     display: block;
-    color: #3b5998;
+    color: #983b43;
     font-weight: bold;
+    
   }
 
-  #page ul li:hover{
+  .page ul li:hover{
       background: rgb(127, 166, 226);
       transition: 2s;
+      
     }
 
-  #page ul li {
+  .page ul li {
     border: 1px solid rgba(72, 91, 196, 0.4);
+    border-width: 1.2px;
     border-right: none;
     border-top: none;
     float: left;
@@ -59,12 +121,11 @@
     height: 100px;
     text-align: center;
     line-height: 6;
-    padding-left: 5px;
+    padding-left: 6.2px;
   }
-
-  #message {
+  .message {
     position: absolute;
-    bottom: 0;
+    bottom:0px;
     /* -webkit-box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.7);
     box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.7); */
     padding: 10px;
@@ -76,17 +137,58 @@
     opacity: 0;
     transition: all 2s;
   }
+  .score{
+    position:absolute;
+    top:550px;
+    left: 350px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border-radius:40%;
+    bottom: 100px;
+    
+  }
+  .counts{
+    display: inline-block;
+    background-color: rgb(17, 106, 189);
+    height: 40px;
+    width: 135px;
+    vertical-align: bottom;
+    line-height: 40px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 30px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    color: white;
+  }
+  .Wins {
+    display: inline-block;
+    height: 60px;
+    width: 100px;
+    background-color: #e62929;
+    text-align: center;
+    line-height: 60px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 30px;
+    padding: 10px;
+    vertical-align: top;
+    color:white;
+  }
 
 
-  #title{
+
+
+  /* #title{
     font-family: 'Pacifico', cursive;
-    font-size: 50px;
+    font-size: 20px;
     padding: 10px;
     border-radius: 5px;
     margin:0 auto;
-    color: #3b5998;
+    color: #949db3;
     text-align:center;
-  }
+  } */
 
 
 
