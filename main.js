@@ -4,10 +4,10 @@
 window.onload = function() {
 
 
-    let x = document.getElementById("token1").value;
-    let y = document.getElementById("token2").value;
+    let x = document.getElementById("token1").value; //token1
+    let y = document.getElementById("token2").value; //token2
 
-    console.log(x);
+    // console.log(x);
 
     let sign = true;
     let gameObject = {}; //object declaration
@@ -112,7 +112,7 @@ window.onload = function() {
                         document.querySelector('.oCounter').innerHTML++;
 
                         gameObject = {};
-                    } else if (count >= 9 && (xsignal != true || osignal != true)){ //if count is more than 8 which is box is full, trigger play again function
+                    } else if (count > 8){ //if count is more than 8 which is box is full, trigger play again function
                         document.querySelector('.message').innerHTML = "Draw! click to play again!"
                         document.querySelector('.message').style.background = "red";
                         document.querySelector('.message').style.opacity = "1";
@@ -122,6 +122,7 @@ window.onload = function() {
                 })
         }
     } 
+    
     cube.addEventListener('click', playGame); //trigger play game when one of the box clicked
 
     let message = document.querySelector('.message');

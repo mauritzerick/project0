@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
   }
-
   .movingText {
     font-family: 'Share Tech Mono', monospace;
     font-size: 50px;
@@ -105,7 +104,6 @@
       background: rgb(127, 166, 226);
       transition: 2s;
   }
-
   .page ul li {
     border: 1px solid rgba(72, 91, 196, 0.4);
     border-width: 1.2px;

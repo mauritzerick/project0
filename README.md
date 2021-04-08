@@ -4,7 +4,7 @@
 
 HTML, CSS, and JS Implementation to build Tic Tac Toe game.
 
-Project 0 Site: [CLICKHERE](https://mauritzerick.github.io/project0/) 
+Access Project 0 Site: [CLICKHERE](https://mauritzerick.github.io/project0/) 
 
 **Author:**  Mauritz Erick
 
@@ -20,10 +20,20 @@ Main source files are:
 ### Instructions ###
 Play the game that takes seconds to learn but weeks to build: **TIC TAC TOE**
 
+RULES FOR TIC-TAC-TOE
+
+1. The game is played on a grid that's 3 squares by 3 squares.
+
+2. You are X, your friend (or the computer in this case) is O. Players take turns putting their marks in empty squares.
+
+3. The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner.
+
+4. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.
+
 
 ### Bugs
 * Hover effect disappeared after initial game completed.
-* Game won't load properly in mobile devices due to CSS bugs.
+* Game won't load properly in different screen devices due to CSS bugs.
 
 ### What I would do better in a future version
 * local storage.
