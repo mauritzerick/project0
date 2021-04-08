@@ -10,7 +10,7 @@ Access Project 0 Site: [CLICKHERE](https://mauritzerick.github.io/project0/)
 
 **Date:** 07 April 2021
 
-Main source files are: 
+Main source files: 
 
 1. index.html
 2. style.css
