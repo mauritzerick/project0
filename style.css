@@ -78,11 +78,66 @@
     opacity: 0; 
   }
 
+  .token{
+    position:absolute;
+    top:80px;
+    left: 410px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border-radius:40%;
+    bottom: 100px;
+  }
+  .token1{
+    display: inline-block;
+    background-color: rgb(17, 106, 189);
+    height: 60px;
+    width: 205px;
+    vertical-align: bottom;
+    line-height: 30px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 30px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    color: white;
+  }
+  .token2{
+    display: inline-block;
+    background-color: rgb(17, 106, 189);
+    height: 60px;
+    width: 205px;
+    vertical-align: bottom;
+    line-height: 30px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 30px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    color: white;
+  }
+  input[type=text] {
+    color: rgb(223, 69, 69);
+    border-radius: 10%;
+    width:100px;
+    text-align: center;
+ }
+  .submit {
+    font-family: 'Share Tech Mono', monospace;
+    color: rgb(17, 17, 17);
+    
+    
+ }
+  .submit:hover {
+    transition: 2s;
+  }
 
   .page {
     /* position: absolute;
     left:500px; */
-    margin: 100px auto;
+    margin: 150px auto;
     background: rgba(255, 255, 255, .98);
     background-color: #fff;
     border: 10px solid rgb(75, 75, 201);
@@ -139,20 +194,19 @@
   }
   .score{
     position:absolute;
-    top:550px;
-    left: 350px;
-    margin: 0 auto;
+    top:520px;
+    left: 300px;
+    margin: 50px;
     text-align: center;
     padding: 20px;
     border-radius:40%;
     bottom: 100px;
-    
   }
   .counts{
     display: inline-block;
     background-color: rgb(17, 106, 189);
     height: 40px;
-    width: 135px;
+    width: 155px;
     vertical-align: bottom;
     line-height: 40px;
     font-family: 'Share Tech Mono', monospace;

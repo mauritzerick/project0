@@ -1,19 +1,14 @@
-          
-//Execute JS immediately once page has been loaded
+let x;
+let y;
 
- 
-    // //initial choose screen
-    // $(document).on('click', '.players', function(){
-    // if ($(this).hasClass('x')){
-    // //   xplayer = true;
-    //   $('.players').addClass('hide');
-    // } else {
-    // //   oplayer = true;
-    //   $('.players').addClass('hide');
-    // }
-    // console.log("clicked");
-    //  });
+//Execute JS immediately once page has been loaded
 window.onload = function() {
+
+
+    let x = document.getElementById("token1").value;
+    let y = document.getElementById("token2").value;
+
+    console.log(x);
 
     let sign = true;
     let gameObject = {}; //object declaration
@@ -22,7 +17,6 @@ window.onload = function() {
     let winCounterO = 0; // count how many times O wins consolelog
     let cube = document.querySelector('.page ul'); //select UL from html
 
-    let test = document.querySelector('.players');
 
     let winProbability = [ //win probability boxes
         [1, 2, 3],
@@ -35,24 +29,10 @@ window.onload = function() {
         [1, 5, 9]
 
     ];
+    
+    const playGame = function(e) {
 
-
-   
-let choose = function(j){
-    let test = j.target;
-    if(test.innerHTML == 'chooseplayer x'){
-        console.log("x clicked");
-    }else if(test.innerHTML == 'chooseplayer o'){
-        console.log("o clicked");
-    // }else {
-    //     console.log("clicked");
-    }
-}
-test.addEventListener('click', choose); 
-
-
-
-    let playGame = function(e) {
+        
 
         // target check
         let cube = e.target; //get inner elements as target
@@ -73,12 +53,12 @@ test.addEventListener('click', choose);
             // DOM change and UPDATE HTML Elements
 
             if (sign) {
-                cube.innerHTML = 'X';
-                gameObject[cubeIndex + 1] = 'X';
+                cube.innerHTML = x;
+                gameObject[cubeIndex + 1] =x;
                 sign = false;
             } else {
-                cube.innerHTML = 'O';
-                gameObject[cubeIndex + 1] = 'O';
+                cube.innerHTML = y;
+                gameObject[cubeIndex + 1] = y;
                 sign = true;
             }
 
@@ -102,10 +82,10 @@ test.addEventListener('click', choose);
                     if (arr.length === 3) {
                         // console.log(arr);
                         // console.log(pos);
-                        if (arr[0] === 'X' && arr[1] === 'X' && arr[2] === 'X') {
+                        if (arr[0] === x && arr[1] === x && arr[2] === x) {
                             xsignal = true;
                         }
-                        if (arr[0] === 'O' && arr[1] === 'O' && arr[2] === 'O') {
+                        if (arr[0] === y && arr[1] === y && arr[2] === y) {
                             osignal = true;
                         }
                     }
@@ -116,7 +96,7 @@ test.addEventListener('click', choose);
                         })
                         let audio = new Audio('victory.mp3');
                         audio.play()
-                        document.querySelector('.message').innerHTML = "X Won! Click to play again!";
+                        document.querySelector('.message').innerHTML = x + " Won! Click to play again!";
                         document.querySelector('.message').style.background = "#17CD6A";
                         document.querySelector('.message').style.opacity = "1";
                         winCounterX++;
@@ -132,7 +112,7 @@ test.addEventListener('click', choose);
                         })
                         let audio = new Audio('victory.mp3');
                         audio.play()
-                        document.querySelector('.message').innerHTML = "O Won! Click to play again!";
+                        document.querySelector('.message').innerHTML = y + " Won! Click to play again!";
                         document.querySelector('.message').style.background = "#E8306B";
                         document.querySelector('.message').style.opacity = "1";
                         winCounterO++;
