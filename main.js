@@ -1,5 +1,4 @@
-let x;
-let y;
+
 
 //Execute JS immediately once page has been loaded
 window.onload = function() {
@@ -16,8 +15,6 @@ window.onload = function() {
     let winCounterX = 0; // count how many times X wins consolelog
     let winCounterO = 0; // count how many times O wins consolelog
     let cube = document.querySelector('.page ul'); //select UL from html
-
-
     let winProbability = [ //win probability boxes
         [1, 2, 3],
         [1, 4, 7],
@@ -27,12 +24,9 @@ window.onload = function() {
         [7, 8, 9],
         [3, 5, 7],
         [1, 5, 9]
-
     ];
     
     const playGame = function(e) {
-
-        
 
         // target check
         let cube = e.target; //get inner elements as target
@@ -41,14 +35,12 @@ window.onload = function() {
             let cubeIndex;
 
             // GET Children
-
             for (let i = 0; i < childs.length; i++) {
                 if (cube == childs[i]) {
                     cubeIndex = i;
                     count++;
                 }
             }
-
             
             // DOM change and UPDATE HTML Elements
 
@@ -62,11 +54,8 @@ window.onload = function() {
                 sign = true;
             }
 
-            if (count > 4 && count < 9) {
+            // if (count > 4 && count < 9) {
 
-                // console.log(gameObject);
-
-                // console.log(winProbability);
                 // CHECK OPERATION
                 winProbability.forEach(function(element) {
                     let arr = [];
@@ -77,8 +66,9 @@ window.onload = function() {
                             pos.push(element);
                         }
                     });
-                    let xsignal = false,
-                        osignal = false;
+                    let xsignal;
+                    let osignal;
+
                     if (arr.length === 3) {
                         // console.log(arr);
                         // console.log(pos);
@@ -89,6 +79,7 @@ window.onload = function() {
                             osignal = true;
                         }
                     }
+
                     if (xsignal === true) {
                         console.log("X won");
                         pos.forEach(function(element) {
@@ -103,12 +94,12 @@ window.onload = function() {
                         console.log(winCounterX);
 
                         document.querySelector('.xCounter').innerHTML++;
- 
+
                         gameObject = {};
                     } else if (osignal === true) {
                         console.log("O won");
                         pos.forEach(function(element) {
-                            document.querySelector('.page ul').children[element - 1].style.background = "#E8306B";
+                        document.querySelector('.page ul').children[element - 1].style.background = "#E8306B";
                         })
                         let audio = new Audio('victory.mp3');
                         audio.play()
@@ -121,20 +112,16 @@ window.onload = function() {
                         document.querySelector('.oCounter').innerHTML++;
 
                         gameObject = {};
-                    }
+                    } else if (count >= 9 && (xsignal != true || osignal != true)){ //if count is more than 8 which is box is full, trigger play again function
+                        document.querySelector('.message').innerHTML = "Draw! click to play again!"
+                        document.querySelector('.message').style.background = "red";
+                        document.querySelector('.message').style.opacity = "1";
+                        gameObject = {};
+                        
+                        }
                 })
-
-            } else if (count > 8){ //if count is more than 8 which is box is full, trigger play again function
-                document.querySelector('.message').innerHTML = "Draw! click to play again!"
-                document.querySelector('.message').style.background = "red";
-                document.querySelector('.message').style.opacity = "1";
-
-                
-                gameObject = {};
-                
-            }
         }
-    }
+    } 
     cube.addEventListener('click', playGame); //trigger play game when one of the box clicked
 
     let message = document.querySelector('.message');
@@ -151,5 +138,7 @@ window.onload = function() {
     }
     message.addEventListener('click', playAgain)
 }
+
+
 
 

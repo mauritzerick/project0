@@ -5,61 +5,6 @@
     padding: 0;
   }
 
-
-/* 
-  .players{
-    position: fixed;
-    height: 200px;
-    width: 310px;
-    background-color: rgb(28, 137, 209);
-    margin-left: 65px;
-    margin-top: 50px;
-    line-height: 200px;
-    text-align: center;
-
-    top: 230px;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 30px;
-  }
-
-  .chooseplayer{
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    left: 350px;
-    color: white;
-    background-color: rgb(190, 32, 32);
-    text-align: top;
-    top: 90px;
-    line-height:80px;
-    opacity: 0.65;
-  }
-  .x {
-    left: 88px;
-    top: 84px;
-    height:40px;
-    width: 40px;
-    border-radius: 10%;
-  }
-
-  .o:hover{
-    transition: all 2s;
-  }
-
-  .o {
-    left: 180px;
-    top: 84px;
-    height:40px;
-    width: 40px;
-    border-radius:10%
-  }
-
-  .hide {
-    display:none;
-  } */
-
-
-
   .movingText {
     font-family: 'Share Tech Mono', monospace;
     font-size: 50px;
@@ -77,7 +22,6 @@
     right: 0;
     opacity: 0; 
   }
-
   .token{
     position:absolute;
     top:80px;
@@ -127,17 +71,17 @@
   .submit {
     font-family: 'Share Tech Mono', monospace;
     color: rgb(17, 17, 17);
-    
-    
+    padding:2px;
+    border-color: white;
+    margin-bottom: 2px;
  }
   .submit:hover {
     transition: 2s;
   }
-
   .page {
     /* position: absolute;
     left:500px; */
-    margin: 150px auto;
+    margin: 170px auto;
     background: rgba(255, 255, 255, .98);
     background-color: #fff;
     border: 10px solid rgb(75, 75, 201);
@@ -148,7 +92,6 @@
     border-radius: 40px;
     overflow: hidden;
   }
-  
   .page ul {
     font-family: 'Share Tech Mono', monospace;
     font-size:larger;
@@ -157,14 +100,11 @@
     display: block;
     color: #983b43;
     font-weight: bold;
-    
   }
-
   .page ul li:hover{
       background: rgb(127, 166, 226);
       transition: 2s;
-      
-    }
+  }
 
   .page ul li {
     border: 1px solid rgba(72, 91, 196, 0.4);
@@ -194,7 +134,7 @@
   }
   .score{
     position:absolute;
-    top:520px;
+    top:540px;
     left: 300px;
     margin: 50px;
     text-align: center;
@@ -230,112 +170,3 @@
     vertical-align: top;
     color:white;
   }
-
-
-
-
-  /* #title{
-    font-family: 'Pacifico', cursive;
-    font-size: 20px;
-    padding: 10px;
-    border-radius: 5px;
-    margin:0 auto;
-    color: #949db3;
-    text-align:center;
-  } */
-
-
-
-  /* Mobile Friendly */
-  /* @media (min-width: 550px) {
-   #page {
-     width: 50%;
-    }
-    #page ul li{
-      width:31%;
-    }
-  } */
-
-  /* ----------- Galaxy S3 ----------- */
-
-/* Portrait and Landscape */
-@media screen 
-and (device-width: 360px) 
-and (device-height: 640px) 
-and (-webkit-device-pixel-ratio: 2) {
-
-}
-
-/* Portrait */
-@media screen 
-and (device-width: 320px) 
-and (device-height: 640px) 
-and (-webkit-device-pixel-ratio: 2) 
-and (orientation: portrait) {
-
-}
-
-/* Landscape */
-@media screen 
-and (device-width: 320px) 
-and (device-height: 640px) 
-and (-webkit-device-pixel-ratio: 2) 
-and (orientation: landscape) {
-
-}
-
-/* ----------- Galaxy S4, S5 and Note 3 ----------- */
-
-/* Portrait and Landscape */
-@media screen 
-and (device-width: 320px) 
-and (device-height: 640px) 
-and (-webkit-device-pixel-ratio: 3) {
-
-}
-
-/* Portrait */
-@media screen 
-and (device-width: 320px) 
-and (device-height: 640px) 
-and (-webkit-device-pixel-ratio: 3) 
-and (orientation: portrait) {
-
-}
-
-/* Landscape */
-@media screen 
-and (device-width: 320px) 
-and (device-height: 640px) 
-and (-webkit-device-pixel-ratio: 3) 
-and (orientation: landscape) {
-
-}
-
-/* ----------- Galaxy S6 ----------- */
-
-/* Portrait and Landscape */
-@media screen 
-and (device-width: 360px) 
-and (device-height: 640px) 
-and (-webkit-device-pixel-ratio: 4) {
-
-}
-
-/* Portrait */
-@media screen 
-and (device-width: 360px) 
-and (device-height: 640px) 
-and (-webkit-device-pixel-ratio: 4) 
-and (orientation: portrait) {
-
-}
-
-/* Landscape */
-@media screen 
-and (device-width: 360px) 
-and (device-height: 640px) 
-and (-webkit-device-pixel-ratio: 4) 
-and (orientation: landscape) {
-
-}
