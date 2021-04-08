@@ -18,15 +18,16 @@ Main source files are:
 4. victory.mp3
 
 ### Instructions ###
-
+Play the game that takes seconds to learn but weeks to build: **TIC TAC TOE**
 
 
 ### Bugs
-* Hover effect disappeared after initial game completed
+* Hover effect disappeared after initial game completed.
+* Game won't load properly in mobile devices due to CSS bugs.
 
 ### What I would do better in a future version
-* An AI or computer player. This can be done by adding random function
-* Customized tokens
-* local storage
-* Board variations
-* creating the tic tac toe with simpler logic
+* local storage.
+* Board variations.
+* Support networked multiplayer.
+* creating the tic tac toe with simpler and shorter logic.
+* An AI or computer player. This can be done by adding random function.
