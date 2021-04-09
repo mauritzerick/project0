@@ -37,7 +37,6 @@ window.onload = function() {
             }
             
             // DOM change and UPDATE HTML Elements
-
             if (sign) {
                 cube.innerHTML = x;
                 gameObject[cubeIndex + 1] =x;
@@ -60,10 +59,11 @@ window.onload = function() {
                             pos.push(element);
                         }
                     });
-                    let xsignal;
-                    let osignal;
 
-                    if (arr.length === 3) {
+                    let xsignal; //signal to check if token 1 wins
+                    let osignal; // signal to check if token 2 wins
+
+                    if (arr.length === 3) { //check array 0 - 2
                         // console.log(arr);
                         // console.log(pos);
                         if (arr[0] === x && arr[1] === x && arr[2] === x) {
@@ -74,7 +74,7 @@ window.onload = function() {
                         }
                     }
 
-                    if (xsignal === true) {
+                    if (xsignal === true) { //player 1 wins
                         console.log("X won");
                         pos.forEach(function(element) {
                         document.querySelector('.page ul').children[element - 1].style.background = "#17CD6A";
@@ -90,7 +90,7 @@ window.onload = function() {
                         document.querySelector('.xCounter').innerHTML++;
 
                         gameObject = {};
-                    } else if (osignal === true) {
+                    } else if (osignal === true) { //player 2 wins
                         console.log("O won");
                         pos.forEach(function(element) {
                         document.querySelector('.page ul').children[element - 1].style.background = "#E8306B";
@@ -106,7 +106,7 @@ window.onload = function() {
                         document.querySelector('.oCounter').innerHTML++;
 
                         gameObject = {};
-                    } else if (count > 8){ //if count is more than 8 which is box is full, trigger play again function
+                    } else if (count > 8){ //if count is more than 8 which is when box is full, draw 
                         document.querySelector('.message').innerHTML = "Draw! click to play again!"
                         document.querySelector('.message').style.background = "red";
                         document.querySelector('.message').style.opacity = "1";

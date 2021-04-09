@@ -22,10 +22,8 @@
     opacity: 0; 
   }
   .token{
-    position:absolute;
-    top:80px;
-    left: 410px;
-    margin: 0 auto;
+    
+    margin: 0px auto;
     text-align: center;
     padding: 20px;
     border-radius:40%;
@@ -80,16 +78,15 @@
     transition: 2s;
   }
   .page {
-    /* position: absolute;
-    left:500px; */
-    margin: 170px auto;
+    
+    margin: 0px auto;
     background: rgba(255, 255, 255, .98);
     background-color: #fff;
     border: 10px solid rgb(75, 75, 201);
     /* -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
     box-shadow: 0 3px 8px rgba(0, 0, 0, .25); */
     height: 300px;
-    width: 22%;
+    width: 26.8%;
     border-radius: 40px;
     overflow: hidden;
   }
@@ -133,10 +130,8 @@
     transition: all 2s;
   }
   .score{
-    position:absolute;
-    top:540px;
-    left: 300px;
-    margin: 50px;
+    
+    margin: -14px auto;
     text-align: center;
     padding: 20px;
     border-radius:40%;
@@ -157,6 +152,7 @@
     margin-bottom: 10px;
     color: white;
   }
+  
   .Wins {
     display: inline-block;
     height: 60px;
