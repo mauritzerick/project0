@@ -30,6 +30,7 @@ RULES FOR TIC-TAC-TOE
 
 4. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a tie.
 
+5. In this site you can choose your own token and currently available for 2 players only, future version would consider to add more players or vs AI option with different levels of difficulty features.
 
 ### Bugs
 * Hover effect disappeared after initial game completed.
