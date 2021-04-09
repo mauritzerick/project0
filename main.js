@@ -1,21 +1,15 @@
-
-
 //Execute JS immediately once page has been loaded
 window.onload = function() {
 
-
     let x = document.getElementById("token1").value; //token1
     let y = document.getElementById("token2").value; //token2
-
-    // console.log(x);
-
-    let sign = true;
+    let sign = true; //variable to add tokens in box
     let gameObject = {}; //object declaration
     let count = 0; // moves count starts from 0
     let winCounterX = 0; // count how many times X wins consolelog
     let winCounterO = 0; // count how many times O wins consolelog
     let cube = document.querySelector('.page ul'); //select UL from html
-    let winProbability = [ //win probability boxes
+    let winProbability = [ //win probability for 3x3 box
         [1, 2, 3],
         [1, 4, 7],
         [2, 5, 8],
@@ -26,7 +20,7 @@ window.onload = function() {
         [1, 5, 9]
     ];
     
-    const playGame = function(e) {
+    const playGame = function(e) { //play game function starts here
 
         // target check
         let cube = e.target; //get inner elements as target
@@ -34,7 +28,7 @@ window.onload = function() {
             let childs = cube.parentNode.children;
             let cubeIndex;
 
-            // GET Children
+            // GET children of LI and count how many turns 
             for (let i = 0; i < childs.length; i++) {
                 if (cube == childs[i]) {
                     cubeIndex = i;
@@ -54,7 +48,7 @@ window.onload = function() {
                 sign = true;
             }
 
-            // if (count > 4 && count < 9) {
+            // if (count > 4 && count < 9) { count only needed if box is full
 
                 // CHECK OPERATION
                 winProbability.forEach(function(element) {
@@ -123,11 +117,11 @@ window.onload = function() {
         }
     } 
     
-    cube.addEventListener('click', playGame); //trigger play game when one of the box clicked
+    cube.addEventListener('click', playGame); //trigger play game when one of the cube box clicked
 
-    let message = document.querySelector('.message');
+    let message = document.querySelector('.message'); //shows message win/draw
 
-    //Reset 
+    //Reset the game when play again clicked
     let playAgain = function() {
         this.style.opacity = "0";
         let a = document.querySelectorAll('li');

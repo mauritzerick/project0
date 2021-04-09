@@ -34,6 +34,7 @@ RULES FOR TIC-TAC-TOE
 
 ### Bugs
 * Hover effect disappeared after initial game completed.
+* You can still fill the box after the game is over.
 * Game won't load properly in different screen devices due to CSS bugs.
 
 ### What I would do better in a future version
