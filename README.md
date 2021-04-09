@@ -33,7 +33,7 @@ RULES FOR TIC-TAC-TOE
 5. In this site you can choose your own token and currently available for 2 players only, future version would consider to add more players or vs AI option with different levels of difficulty features.
 
 ### Bugs
-* Hover effect disappeared after initial game completed.
+* Box hover effect disappeared after the initial game completed.
 * You can still fill the box after the game is over.
 * Game won't load properly in different screen devices due to CSS bugs.
 
